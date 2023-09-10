@@ -8,4 +8,5 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
+    //Задание 19.9.1 (HW-03)
 }
