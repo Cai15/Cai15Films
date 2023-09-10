@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/buttonPanelC"
+        android:layout_width="300dp"
+        android:layout_height="550dp"
+        android:layout_gravity="center"
+        android:background="#BAFCF1"
+        android:orientation="vertical"
+        app:circularflow_viewCenter="@id/buttonPanelC"
+        app:layout_constraintBottom_toBottomOf="@id/menu_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/menu_TOP">
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/menu_TOP"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#E93F52"
+        app:layout_constraintTop_toBottomOf="@+id/buttonPanelC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/menu_bottom"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#EED0FB"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraint_toBottomOf="@+id/buttonPanelC" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
