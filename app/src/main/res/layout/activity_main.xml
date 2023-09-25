@@ -26,41 +26,41 @@
             android:id="@+id/button1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@android:color/white"
-            android:background="?selectableItemBackgroundBorderless"
+            android:textColor="#590909"
+            style="@style/RoundButton"
             android:text="@string/Menu" />
 
         <Button
             android:id="@+id/button2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@android:color/white"
-            android:background="?selectableItemBackgroundBorderless"
+            android:textColor="#590909"
+            style="@style/RoundButton"
             android:text="@string/Izbran" />
 
         <Button
             android:id="@+id/button3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@android:color/white"
-            android:background="?selectableItemBackgroundBorderless"
+            android:textColor="#590909"
+            style="@style/RoundButton"
             android:text="@string/Pozze" />
 
         <Button
             android:id="@+id/button4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@android:color/white"
-            android:background="?selectableItemBackgroundBorderless"
+            android:textColor="#590909"
+            style="@style/RoundButton"
             android:text="@string/Podborki" />
 
         <Button
             android:id="@+id/button5"
+            style="@style/RoundButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@android:color/white"
-            android:background="?selectableItemBackgroundBorderless"
-            android:text="@string/Settings" />
+            android:text="@string/Settings"
+            android:textColor="#590909" />
     </LinearLayout>
 
     <androidx.cardview.widget.CardView
