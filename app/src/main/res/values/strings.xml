@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Cai15Films</string>
+    <string name="Menu">МЕНЮ</string>
+    <string name="Izbran">ИЗБРАННОЕ</string>
+    <string name="Pozze">ПОСМОТРЕТЬ ПОЗЖЕ</string>
+    <string name="Podborki">ПОДБОРКИ</string>
+    <string name="Settings">НАСТРОЙКИ</string>
 </resources>
