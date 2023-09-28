@@ -9,59 +9,32 @@
     android:visibility="visible"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
 
-        android:layout_width="299dp"
-        android:layout_height="236dp"
-        android:layout_gravity="center"
-        android:background="@drawable/corner_background"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/menu_bottom"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/menu_TOP"
-        tools:ignore="MissingConstraints">
-
-        <Button
-            android:id="@+id/button1"
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="#590909"
-            style="@style/RoundButton"
-            android:text="@string/Menu" />
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/baseline_menu_24"
+            app:menu="@menu/top_app_bar"
+            style="@style/Widget.MaterialComponents.Toolbar.Primary" />
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="#590909"
-            style="@style/RoundButton"
-            android:text="@string/Izbran" />
+    </com.google.android.material.appbar.AppBarLayout>
 
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="#590909"
-            style="@style/RoundButton"
-            android:text="@string/Pozze" />
-
-        <Button
-            android:id="@+id/button4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="#590909"
-            style="@style/RoundButton"
-            android:text="@string/Podborki" />
-
-        <Button
-            android:id="@+id/button5"
-            style="@style/RoundButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/Settings"
-            android:textColor="#590909" />
-    </LinearLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        app:itemTextColor="@android:color/white"
+        app:itemIconTint="@android:color/white"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/navigation_menu" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/menu_TOP"
@@ -71,7 +44,7 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_bar_layout"
         app:cardCornerRadius="15dp"
         android:layout_margin="10dp">
 
@@ -115,16 +88,6 @@
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
-    <FrameLayout
-        android:id="@+id/menu_bottom"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:background="#EED0FB"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <androidx.constraintlayout.helper.widget.Flow
         android:id="@+id/flow"
         android:layout_width="wrap_content"
@@ -138,8 +101,11 @@
         android:autoLink="web"
         android:linksClickable="true"
         android:text="Картинки взяты с сайта https://www.movieposters.com/"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menu_TOP"
+        app:layout_constraintVertical_bias="0.031"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="210dp" />
+        tools:layout_editor_absoluteX="16dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
