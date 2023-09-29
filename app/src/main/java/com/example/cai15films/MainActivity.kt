@@ -1,7 +1,6 @@
 package com.example.cai15films
 
 
-
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -24,6 +23,7 @@ class MainActivity : AppCompatActivity() {
                     Toast.makeText(this, "Настройки", Toast.LENGTH_SHORT).show()
                     true
                 }
+
                 else -> false
             }
         }
@@ -35,14 +35,17 @@ class MainActivity : AppCompatActivity() {
                     Toast.makeText(this, "Избранное", Toast.LENGTH_SHORT).show()
                     true
                 }
+
                 R.id.watch_later -> {
-                    Toast.makeText(this, "Посмотреть похже", Toast.LENGTH_SHORT).show()
-                    true
-                }
-                R.id.selections -> {
                     Toast.makeText(this, "Подборки", Toast.LENGTH_SHORT).show()
                     true
                 }
+
+                R.id.selections -> {
+                    Toast.makeText(this, "Посмотреть позже", Toast.LENGTH_SHORT).show()
+                    true
+                }
+
                 else -> false
             }
         }
@@ -67,9 +70,8 @@ class MainActivity : AppCompatActivity() {
     }*/
 
 
-
     }
 
-
+//Задание 21.8.1 (HW-03)
 
 }

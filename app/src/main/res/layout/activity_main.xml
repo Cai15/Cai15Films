@@ -17,11 +17,11 @@
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/topAppBar"
+            style="@style/Widget.MaterialComponents.Toolbar.Primary"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            app:navigationIcon="@drawable/baseline_menu_24"
             app:menu="@menu/top_app_bar"
-            style="@style/Widget.MaterialComponents.Toolbar.Primary" />
+            app:navigationIcon="@drawable/baseline_menu_24" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -30,8 +30,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimaryDark"
-        app:itemTextColor="@android:color/white"
         app:itemIconTint="@android:color/white"
+        app:itemTextColor="@android:color/white"
         app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/navigation_menu" />
@@ -40,13 +40,13 @@
         android:id="@+id/menu_TOP"
         android:layout_width="407dp"
         android:layout_height="193dp"
+        android:layout_margin="10dp"
         android:background="#E93F52"
         android:orientation="horizontal"
+        app:cardCornerRadius="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/app_bar_layout"
-        app:cardCornerRadius="15dp"
-        android:layout_margin="10dp">
+        app:layout_constraintTop_toBottomOf="@+id/app_bar_layout">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -59,27 +59,27 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:contentDescription="TODO"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/post3"
-                android:contentDescription="TODO" />
+                app:srcCompat="@drawable/post3" />
 
             <ImageView
                 android:id="@+id/imageView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:contentDescription="TODO"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/post2"
-                android:contentDescription="TODO" />
+                app:srcCompat="@drawable/post2" />
 
             <ImageView
                 android:id="@+id/imageView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1 "
+                android:contentDescription="TODO"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/post1"
-                android:contentDescription="TODO" />
+                app:srcCompat="@drawable/post1" />
 
             <ImageView
                 android:id="@+id/imageView4"
