@@ -60,7 +60,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/post3" />
+                app:srcCompat="@drawable/post3"
+                android:contentDescription="TODO" />
 
             <ImageView
                 android:id="@+id/imageView2"
@@ -68,7 +69,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/post2" />
+                app:srcCompat="@drawable/post2"
+                android:contentDescription="TODO" />
 
             <ImageView
                 android:id="@+id/imageView3"
@@ -76,7 +78,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1 "
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/post1" />
+                app:srcCompat="@drawable/post1"
+                android:contentDescription="TODO" />
 
             <ImageView
                 android:id="@+id/imageView4"
@@ -100,7 +103,7 @@
         android:layout_height="wrap_content"
         android:autoLink="web"
         android:linksClickable="true"
-        android:text="Картинки взяты с сайта https://www.movieposters.com/"
+        android:text="@string/https_www_movieposters_com"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/menu_TOP"

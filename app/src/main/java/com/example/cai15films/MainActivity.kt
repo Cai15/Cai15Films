@@ -11,12 +11,41 @@ import com.example.cai15films.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
 
-    private lateinit var binding: ActivityMainBinding  //defining the binding class
+    private lateinit var binding: ActivityMainBinding
 
-    /*override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater) //initializing the binding class
+        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.topAppBar.setOnMenuItemClickListener {
+            when (it.itemId) {
+                R.id.settings -> {
+                    Toast.makeText(this, "Настройки", Toast.LENGTH_SHORT).show()
+                    true
+                }
+                else -> false
+            }
+        }
+
+        binding.bottomNavigation.setOnNavigationItemSelectedListener {
+
+            when (it.itemId) {
+                R.id.favorites -> {
+                    Toast.makeText(this, "Избранное", Toast.LENGTH_SHORT).show()
+                    true
+                }
+                R.id.watch_later -> {
+                    Toast.makeText(this, "Посмотреть похже", Toast.LENGTH_SHORT).show()
+                    true
+                }
+                R.id.selections -> {
+                    Toast.makeText(this, "Подборки", Toast.LENGTH_SHORT).show()
+                    true
+                }
+                else -> false
+            }
+        }
 
         /*  binding.button1.setOnClickListener {
             Toast.makeText(this, "Меню", Toast.LENGTH_SHORT).show()
@@ -39,35 +68,8 @@ class MainActivity : AppCompatActivity() {
 
 
 
-    }*/
-
-
-    topAppBar.setOnMenuItemClickListener {
-        when (it.itemId) {
-            R.id.settings -> {
-                Toast.makeText(this, "Настройки", Toast.LENGTH_SHORT).show()
-                true
-            }
-            else -> false
-        }
     }
 
-    bottom_navigation.setOnNavigationItemSelectedListener {
 
-        when (it.itemId) {
-            R.id.favorites -> {
-                Toast.makeText(this, "Избранное", Toast.LENGTH_SHORT).show()
-                true
-            }
-            R.id.watch_later -> {
-                Toast.makeText(this, "Посмотреть похже", Toast.LENGTH_SHORT).show()
-                true
-            }
-            R.id.selections -> {
-                Toast.makeText(this, "Подборки", Toast.LENGTH_SHORT).show()
-                true
-            }
-            else -> false
-        }
-    }
+
 }
